@@ -1,4 +1,4 @@
-// swift-tools-version:5.9
+// swift-tools-version:6.1
 //
 //  Package.swift
 //  Paseto
@@ -15,7 +15,7 @@ let package = Package(
     platforms: [
         // Same baseline as CryptoSwift
         // Increased iOS, tvOS and watchOS because of ISO8601DateFormatter
-        .macOS(.v14), .iOS(.v15), .tvOS(.v12), .watchOS(.v4)
+        .macOS(.v14), .iOS(.v15), .tvOS(.v18), .watchOS(.v11)
     ],
     products: [
         .library(name: "Paseto", targets: ["Paseto"]),
@@ -38,8 +38,7 @@ let package = Package(
         .target(
             name: "Paseto",
             dependencies: [
-                .product(name: "Clibsodium", package: "Sodium"),
-                .product(name: "Sodium", package: "Sodium"),
+                .product(name: "Sodium", package: "swift-sodium"),
                 "CryptoSwift",
                 "TypedJSON"
             ]
@@ -52,5 +51,5 @@ let package = Package(
             ]
         ),
     ],
-    swiftLanguageVersions: [.v5]
+    swiftLanguageModes: [.v5]
 )

@@ -22,7 +22,6 @@ fileprivate let aBn = BigUInteger("394020061963944792122790401001436138050797392
 //     8707301988689241309860865136260764883745107765439761230575
 fileprivate let bBn = BigUInteger("27580193559959705877849011840389048093056905856361568521428707301988689241309860865136260764883745107765439761230575", radix: 10)!
 
-@available(macOS 11, iOS 14, watchOS 7, tvOS 14, macCatalyst 14, *)
 extension Version3.Public {
     public struct AsymmetricPublicKey  {
         public static let length = 49
@@ -183,12 +182,10 @@ extension Version3.Public {
     }
 }
 
-@available(macOS 11, iOS 14, watchOS 7, tvOS 14, macCatalyst 14, *)
 extension Version3.Public.AsymmetricPublicKey : Paseto.AsymmetricPublicKey {
     public typealias Module = Version3.Public
 }
 
-@available(macOS 11, iOS 14, watchOS 7, tvOS 14, macCatalyst 14, *)
 public extension Version3.Public.AsymmetricPublicKey  {
     enum Exception: Error {
         case badLength(String)

@@ -5,7 +5,6 @@ import Sodium
 
 class KeyTest: XCTestCase {
 #if compiler(>=5.7)
-    @available(macOS 13, *)
     func testGeneratedKeyImport() {
         for _ in 1...100 {
             let privKey = P384.Signing.PrivateKey(compactRepresentable: false)
@@ -18,7 +17,6 @@ class KeyTest: XCTestCase {
         }
     }
 
-    @available(macOS 13, *)
     func testRandomKeyImport() {
         for _ in 1...100 {
             let bytes = [Util.random(length: 1)[0] % 2 == 0 ? 02 : 03] + Util.random(length: 48)
