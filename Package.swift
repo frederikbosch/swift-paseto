@@ -15,7 +15,7 @@ let package = Package(
     platforms: [
         // Same baseline as CryptoSwift
         // Increased iOS, tvOS and watchOS because of ISO8601DateFormatter
-        .macOS(.v14), .iOS(.v15), .tvOS(.v18), .watchOS(.v11)
+        .macOS(.v14), .iOS(.v15), .tvOS(.v17), .watchOS(.v10)
     ],
     products: [
         .library(name: "Paseto", targets: ["Paseto"]),
