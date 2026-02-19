@@ -28,5 +28,5 @@ jobs:
         run: |
           cd Tests/PasetoTests/TestVectors
           rm *
-          wget https://raw.githubusercontent.com/paseto-standard/test-vectors/master/v{1..4}.json
+          wget https://raw.githubusercontent.com/paseto-standard/test-vectors/master/v{1,2,3,4}.json
           git diff --exit-code
