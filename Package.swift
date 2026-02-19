@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 //
 //  Package.swift
 //  Paseto
@@ -15,14 +15,13 @@ let package = Package(
     platforms: [
         // Same baseline as CryptoSwift
         // Increased iOS, tvOS and watchOS because of ISO8601DateFormatter
-        .macOS(.v10_12), .iOS(.v10), .tvOS(.v10), .watchOS(.v3)
+        .macOS(.v14), .iOS(.v15), .tvOS(.v12), .watchOS(.v4)
     ],
     products: [
         .library(name: "Paseto", targets: ["Paseto"]),
     ],
     dependencies: [
         .package(
-            name: "Sodium",
             url: "https://github.com/jedisct1/swift-sodium.git",
             .upToNextMajor(from: "0.10.0")
         ),
